@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F1DE;
+    padding-top: 80px; /* Para compensar o menu fixo */
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #F4F1DE;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #E07A5F;
+}
+
+h3 {
+    font-size: 24px;
+    color: #E07A5F;
+    margin-top: 10px;
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 1100px;
+    color: #E07A5F;
+    font-weight: 600;
+    font-family: 'montserrat', 'arial', sans-serif;
+}
+
+/* Menu fixo que acompanha o rolamento */
+.Menu-Central {
+    background-color: #F4F1DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.NavegationButton {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.NavegationButton :hover {
+    color: #E07A5F;
+    font-weight: 500;
+    text-decoration: underline;
+    height: 100%;
+}
+
+.botoes {
+    color: #E07A5F;
+}
+
+.botoes a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 15px;
+    font-family: 'montserrat', 'arial', sans-serif;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.botao-agendar1 {
+    height: 100%;
+    background-color: #E07A5F;
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.botao-agendar1:hover {
+    background-color: #d36a4f;
+}
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #E07A5F;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+.menu-hamburguer.ativo {
+    transform: rotate(90deg);
+}
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.Apresentacao {
+    font-family: 'montserrat', 'arial' sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imagens/PsicologiaPrimeiraImagem.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.Texto-Apresentacao h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #F4F1DE;
+    font-family: 'Montserrat', 'arial', sans-serif;
+}
+.Texto-Apresentacao h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #F4F1DE;
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-weight: 500;
+}
+.Texto-Apresentacao p {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 800px;
+    color: #F4F1DE;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.botao-agendar {
+    margin-top: 1px;
+    background-color: #E07A5F;
+    color: #F4F1DE;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.botao-agendar:hover {
+    background-color: #d36a4f;
+}
+.Sobre-mim {
+    background-color: #F4F1DE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+.Sobre-mim h2 {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #E07A5F;
+}
+.Foto-Rosane {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.Servicos {
+    background-color: #E07A5F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+.Servicos h2 {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #F4F1DE;
+}
+.Texto-Servicos {
+    margin-bottom: 30px;
+}
+.Servicos p {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    max-width: 1100px;
+    color: #F4F1DE;
+    font-weight: 600;
+}
+.grid-servicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.card {
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card h3 {
+    font-size: 24px;
+    color: #F4F1DE;
+    margin-top: 10px;
+}
+.Secao-mapa {
+    background-color: #F4F1DE;
+    padding: 80px 20px;
+    text-align: center;
+}
+.Secao-mapa p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+.Container-Mapa h2 {
+    color: #E07A5F;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', 'arial', sans-serif;
+}
+.Mapa-iframe {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #E07A5F;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.Mapa-iframe iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    display: block;
+}
+.Container-Contatos-Cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+}
+.Card-Contato {
+    background-color: #E07A5F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.Card-Contato img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.Card-Contato p {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    color: #F4F1DE;
+    font-size: 1.0rem;
+    word-break: break-word;
+}
+.Card-Contato:hover {
+    transform: translateY(-5px);
+}
+.Horario-funcionamento {
+    background-color: #E07A5F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+}
+.Horario-funcionamento h3 {
+    color: #F4F1DE;
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.Horario-funcionamento p {
+    font-family: 'Montserrat', 'arial', sans-serif;
+    font-weight: 500;
+    color: #F4F1DE;
+}
+.voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #E07A5F;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.voltar-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+.voltar-topo:hover {
+    background-color: #E07A5F;
+    transform: translateY(-3px);
+}
+.rodape-simples {
+    background-color: #E07A5F;
+    color: #F4F1DE;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+.container-rodape-simples {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-rodape-pequeno {
+    max-width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-bottom: 15px;
+}
+.copyright {
+    font-size: 0.9rem;
+    color: #F4F1DE;
+    opacity: 0.8;
+    margin: 0;
+}
+.links-uteis {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links-uteis a {
+    color: #F4F1DE;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.links-uteis a:hover {
+    color: #E07A5F;
+}
+.contato-rodape p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #F4F1DE;
+}
+
+.contato-rodape i {
+    width: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .rodape-simples {
+        padding: 30px 0;
+    }
+    
+    .container-rodape-simples {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    } 
+    .links-uteis {
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .contato-rodape {
+        order: 3;
+    }
+    .logo-copyright {
+        order: 1;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .grid-servicos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 15px;
+    } 
+    .Texto-Apresentacao p {
+        font-size: 1.4rem;
+        padding: 0 15px;
+    }
+    .Container-Contatos-Cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+    .Mapa-iframe {
+        max-width: 90%;
+    }
+    .Foto-Rosane {
+        width: 300px;
+        height: 300px;
+    }
+    .Card-Contato img {
+        width: 120px;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+    .menu-hamburguer {
+        display: block;
+    }
+    .menu-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F4F1DE;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    .menu-container.menu-aberto {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .NavegationButton {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    .botoes {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(224, 122, 95, 0.1);
+    }
+    .botoes a {
+        display: block;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px;
+    }
+    .botao-agendar1 {
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px;
+    }
+    .logotipo {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
+    .Texto-Apresentacao p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .Texto-Apresentacao h1 {
+        font-size: 36px;
+    }
+    .Texto-Apresentacao h2 {
+        font-size: 28px;
+    }
+    .grid-servicos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .Container-Contatos-Cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    .Card-Contato img {
+        width: 100px;
+    }
+    .Card-Contato p {
+        font-size: 1rem;
+    }
+    .Mapa-iframe iframe {
+        height: 300px;
+    }
+    .Foto-Rosane {
+        width: 250px;
+        height: 250px;
+    }
+    .Apresentacao, .Sobre-mim, .Servicos, .Secao-mapa {
+        padding: 60px 15px;
+    }
+    .voltar-topo {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .Texto-Apresentacao h1 {
+        font-size: 28px;
+    }
+    .Texto-Apresentacao h2 {
+        font-size: 22px;
+    }
+    .Texto-Apresentacao p {
+        font-size: 1rem;
+    }
+    .botao-agendar, .botao-agendar1 {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .grid-servicos {
+        padding: 0 10px;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card img {
+        height: 200px;
+    }
+    .Container-Contatos-Cards {
+        padding: 0 10px;
+    }
+    .Mapa-iframe {
+        max-width: 100%;
+    }
+    .Mapa-iframe iframe {
+        height: 250px;
+    }
+    .Foto-Rosane {
+        width: 200px;
+        height: 200px;
+    }
+    .Horario-funcionamento h3 {
+        font-size: 1.2rem;
+    }
+    .Horario-funcionamento p {
+        font-size: 0.9rem;
+    }
+    .voltar-topo {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .Texto-Apresentacao h1 {
+        font-size: 24px;
+    }
+    .Texto-Apresentacao h2 {
+        font-size: 18px;
+    }
+    .logo {
+        max-width: 150px;
+    }
+    .Foto-Rosane {
+        width: 180px;
+        height: 180px;
+    }
+    .card img {
+        height: 180px;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    .Mapa-iframe iframe {
+        height: 200px;
+    }
+    .voltar-topo {
+        bottom: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .grid-servicos {
+        max-width: 1400px;
+    }
+    .Texto-Apresentacao p {
+        max-width: 1000px;
+    }
+    .Container-Contatos-Cards {
+        max-width: 1100px;
+    }
+}
+@media print {
+    .Menu-Central, .botao-agendar, .botao-agendar1, .menu-hamburguer, .voltar-topo {
+        display: none !important;
+    }
+    body {
+        background-color: white;
+        color: black;
+        padding-top: 0;
+    }
+    p, h1, h2, h3 {
+        color: black;
+    }
+    .Apresentacao {
+        background-image: none !important;
+        background-color: white;
+        color: black;
+    }
+    .Texto-Apresentacao h1, .Texto-Apresentacao h2, .Texto-Apresentacao p {
+        color: black;
+    }
+}
